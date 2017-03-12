@@ -14,15 +14,15 @@ USE [LEI];
 INSERT INTO [LEI].dbo.[DataOrdem]
 	SELECT DISTINCT
 		OrderDate AS Data,
-		DATEPART(yyyy,OrderDate) AS Ano,
 		DATEPART(mm,OrderDate) AS Mes,
+		DATEPART(yyyy,OrderDate) AS Ano,
 		DATEPART(ww,OrderDate) AS Semana,
 		DATEPART(dd,OrderDate) AS Dia
 		FROM [AdventureWorks2014].[Sales].[SalesOrderHeader]
 		ORDER BY
 			OrderDate,
-			DATEPART(yyyy,OrderDate),
 			DATEPART(mm,OrderDate),
+			DATEPART(yyyy,OrderDate),
 			DATEPART(ww,OrderDate),
 			DATEPART(dd,OrderDate);
 
