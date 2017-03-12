@@ -1,0 +1,23 @@
+USE [LEI]
+GO
+
+/****** Object:  Table [dbo].[Cliente]    Script Date: 12/03/2017 15:24:02 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Cliente](
+	[id] [int] NOT NULL,
+	[NomeCompleto] [nvarchar](200) NOT NULL,
+	[Email] [nvarchar](200) NOT NULL,
+ CONSTRAINT [PK_Cliente] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+
