@@ -1,0 +1,63 @@
+PRIMEIRA FASE:
+
+DATASET : IMDB
+
+Este	dataset	contém	28	atributos	descrevendo	cerca	de	5000	filmes.	Exemplos	de	questões	a	colocar	para	análise	
+podem	incluir:	
+i) Podemos	prever	o	impacto	de	um	filme	somente	com	base	nestes	atributos	e	sem	conhecer	as	críticas	
+ao	filme?
+ii) Será	 que	 atributos	 como	 o	 número	 de	 atores	 ou	 a	 sua	 duração	 poderá	 ser	 utilizada	 para	 prever	 a	
+pontuação	que	o	filme	vai	ter	na	IMDB?
+
+
+IMPORTANTE SEGUIR METODOLOGIA CRISP-DM
+
+
+O QUE É PARA FAZER: [
+
+-> Os	alunos	 devem	 fazer	 uma	 breve	descrição	do	dataset,	da	natureza	dos	dados	(tipo	de	atributos,	estatísticas	dos	atributos,	...).
+
+-> Questões	colocadas	para	análise	e	a	abordar	no	projeto.
+
+-> Deverá	ainda	propor	diferentes	técnicas	mais	apropriadas	a	utilizar.
+
+-> Cada	grupo deverá	apresentar	entre	3	a	5	questões (não	 triviais)	a	analisar.
+
+]
+
+O QUE ESTÁ FEITO: []
+
+
+
+
+SEGUINDO A METODOLOGIA CRISP-DM EIS O QUE TEMOS DE FAZER NO RELATÓRIO/TRABALHO PRÁTICO:
+
+BUSINESS UNDERSTANDING: 
+	Focus: Perceber os objetivos do projeto
+		   Explicar o plano para atingir esses objetivos
+
+	Objetive: Os objetivos que pretendemos atingir, exemplo: Prever o imdb raking.
+
+	Plano: Por exemplo: Remover Nulos, Limpeza dos dados, reparar o dados, criar modelos.
+
+
+DATA UNDERSTANDING:
+
+	DATA COLLECTION.
+	UNDERSTANDING DATA: 
+	[1] "color"                     "director_name"             "num_critic_for_reviews"   
+	[4] "duration"                  "director_facebook_likes"   "actor_3_facebook_likes"   
+	[7] "actor_2_name"              "actor_1_facebook_likes"    "gross"                    
+	[10] "genres"                    "actor_1_name"              "movie_title"              
+	[13] "num_voted_users"           "cast_total_facebook_likes" "actor_3_name"             
+	[16] "facenumber_in_poster"      "plot_keywords"             "movie_imdb_link"          
+	[19] "num_user_for_reviews"      "language"                  "country"                  
+	[22] "content_rating"            "budget"                    "title_year"               
+	[25] "actor_2_facebook_likes"    "imdb_score"                "aspect_ratio"             
+	[28] "movie_facebook_likes"     
+
+	IDENTIFY QUALITY PROBLEMS: Falta de informação, web site linking - leaker, Genres listed as one, 
+	INITIAL INSIGHTS
+
+DATA PREPARATION:
+DEPOIS TERMINO ISTO.
