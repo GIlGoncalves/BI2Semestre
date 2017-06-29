@@ -1,0 +1,183 @@
+<Schema name="BI">
+  <Dimension visible="true" highCardinality="false" name="Dim cliente">
+    <Hierarchy name="Cidade" visible="true" hasAll="true" primaryKey="id_cliente">
+      <Table name="dim_cliente">
+      </Table>
+      <Level name="pais" visible="true" column="pais" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        <Annotations>
+          <Annotation name="Data.Role">
+            <![CDATA[Geography]]>
+          </Annotation>
+          <Annotation name="Geo.Role">
+            <![CDATA[country]]>
+          </Annotation>
+        </Annotations>
+      </Level>
+      <Level name="cidade" visible="true" column="cidade" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        <Annotations>
+          <Annotation name="Data.Role">
+            <![CDATA[Geography]]>
+          </Annotation>
+          <Annotation name="Geo.Role">
+            <![CDATA[city]]>
+          </Annotation>
+          <Annotation name="Geo.RequiredParents">
+            <![CDATA[country]]>
+          </Annotation>
+        </Annotations>
+      </Level>
+      <Level name="id_cliente" visible="true" column="id_cliente" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Data nascimento" visible="true" hasAll="true" primaryKey="id_cliente">
+      <Table name="dim_cliente" schema="">
+      </Table>
+      <Level name="Data nascimento" visible="true" column="data_nascimento" type="Date" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Data registo" visible="true" hasAll="true" primaryKey="id_cliente">
+      <Table name="dim_cliente" schema="">
+      </Table>
+      <Level name="Data registo" visible="true" column="data_registo" type="Date" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Email" visible="true" hasAll="true" primaryKey="id_cliente">
+      <Table name="dim_cliente" schema="">
+      </Table>
+      <Level name="Email" visible="true" column="email" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Last update" visible="true" hasAll="true" primaryKey="id_cliente">
+      <Table name="dim_cliente" schema="">
+      </Table>
+      <Level name="Last update" visible="true" column="last_update" type="Date" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Nome" visible="true" hasAll="true" primaryKey="id_cliente">
+      <Table name="dim_cliente" schema="">
+      </Table>
+      <Level name="Nome" visible="true" column="nome" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Nr telemovel" visible="true" hasAll="true" primaryKey="id_cliente">
+      <Table name="dim_cliente" schema="">
+      </Table>
+      <Level name="Nr telemovel" visible="true" column="nr_telemovel" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Sexo" visible="true" hasAll="true" primaryKey="id_cliente">
+      <Table name="dim_cliente" schema="">
+      </Table>
+      <Level name="Sexo" visible="true" column="sexo" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="id_cliente" visible="true" column="id_cliente" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="Dim data">
+    <Hierarchy name="Ano" visible="true" hasAll="true" primaryKey="id_data">
+      <Table name="dim_data" schema="">
+      </Table>
+      <Level name="Ano" visible="true" column="ano" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Trimestre" visible="true" column="trimestre" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Mes" visible="true" column="mes" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Data" visible="true" column="data" type="Date" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Dia" visible="true" hasAll="true" primaryKey="id_data">
+      <Table name="dim_data" schema="">
+      </Table>
+      <Level name="Dia" visible="true" column="dia" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Data" visible="true" column="data" type="Date" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Dia semana" visible="true" hasAll="true" primaryKey="id_data">
+      <Table name="dim_data" schema="">
+      </Table>
+      <Level name="Dia semana" visible="true" column="dia_semana" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Data" visible="true" column="data" type="Date" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="Dim jogo">
+    <Hierarchy name="Data lancamento" visible="true" hasAll="true" primaryKey="id_jogo">
+      <Table name="dim_jogo" schema="">
+      </Table>
+      <Level name="Data lancamento" visible="true" column="data_lancamento" type="Date" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="id_jogo" visible="true" column="id_jogo" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Desconto" visible="true" hasAll="true" primaryKey="id_jogo">
+      <Table name="dim_jogo" schema="">
+      </Table>
+      <Level name="Desconto" visible="true" column="desconto" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Idade minima" visible="true" hasAll="true" primaryKey="id_jogo">
+      <Table name="dim_jogo" schema="">
+      </Table>
+      <Level name="Idade minima" visible="true" column="idade_minima" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="id_jogo" visible="true" column="id_jogo" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Last update" visible="true" hasAll="true" primaryKey="id_jogo">
+      <Table name="dim_jogo" schema="">
+      </Table>
+      <Level name="Last update" visible="true" column="last_update" type="Date" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Nome" visible="true" hasAll="true" primaryKey="id_jogo">
+      <Table name="dim_jogo" schema="">
+      </Table>
+      <Level name="Nome" visible="true" column="nome" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Preco" visible="true" hasAll="true" primaryKey="id_jogo">
+      <Table name="dim_jogo" schema="">
+      </Table>
+      <Level name="Preco" visible="true" column="preco" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Produtor" visible="true" hasAll="true" primaryKey="id_jogo">
+      <Table name="dim_jogo" schema="">
+      </Table>
+      <Level name="Produtor" visible="true" column="produtor" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="id_jogo" visible="true" column="id_jogo" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Stock" visible="true" hasAll="true" primaryKey="id_jogo">
+      <Table name="dim_jogo" schema="">
+      </Table>
+      <Level name="Stock" visible="true" column="stock" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Cube name="BI" visible="true" cache="true" enabled="true">
+    <Table name="tf_venda">
+    </Table>
+    <DimensionUsage source="Dim cliente" name="Dim cliente" visible="true" foreignKey="id_cliente" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Dim data" name="Dim data" visible="true" foreignKey="id_data" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Dim jogo" name="Dim jogo" visible="true" foreignKey="id_jogo" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="Desconto" column="desconto" formatString="###,###,###.#" aggregator="avg">
+    </Measure>
+    <Measure name="Idade cliente" column="idade_cliente" formatString="###,###,###.#" aggregator="count">
+    </Measure>
+    <Measure name="Preco total" column="preco_total" formatString="#.#" aggregator="sum">
+    </Measure>
+    <Measure name="Preco unidade" column="preco_unidade" formatString="###,###,###.#" aggregator="sum">
+    </Measure>
+    <Measure name="Quantidade" column="quantidade" formatString="#" aggregator="sum">
+    </Measure>
+  </Cube>
+</Schema>
